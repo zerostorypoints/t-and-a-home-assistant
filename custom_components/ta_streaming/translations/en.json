@@ -1,0 +1,107 @@
+{
+  "config": {
+    "flow_title": "{name}",
+    "step": {
+      "user": {
+        "title": "T+A device",
+        "description": "Enter the IP address or host name of your T+A HV series streamer, for example a PSD 3100 HV. It must be on the same network as Home Assistant.",
+        "data": {
+          "host": "Host"
+        },
+        "data_description": {
+          "host": "For example 192.168.1.50. Reserve the address in your router so it does not change."
+        }
+      },
+      "zeroconf_confirm": {
+        "title": "T+A device found",
+        "description": "Add {name} ({model}) at {host}?\n\nTip: reserve {host} for the device in your router (a DHCP reservation or static lease). If the address changes, Home Assistant finds the device again, but only while it is on the network."
+      },
+      "reconfigure": {
+        "title": "Change the device address",
+        "data": {
+          "host": "Host"
+        },
+        "description": "Enter the new address of the device."
+      }
+    },
+    "error": {
+      "cannot_connect": "The device did not answer. Check the address and that it is powered at the mains (standby is fine).",
+      "not_ta": "A device answered, but it is not a T+A streaming device.",
+      "unknown": "Unexpected error."
+    },
+    "abort": {
+      "already_configured": "This device is already set up.",
+      "cannot_connect": "The device did not answer.",
+      "not_ta": "The discovered device is not a T+A streaming device.",
+      "reconfigure_successful": "The address was updated.",
+      "wrong_device": "A different device answers at this address."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "T+A options",
+        "data": {
+          "max_volume": "Maximum volume"
+        },
+        "data_description": {
+          "max_volume": "Home Assistant never sets the volume above this, so a slipped slider cannot drive the system to full power. The device's own remote and knob are not limited."
+        }
+      }
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "network": {
+        "name": "Network"
+      }
+    },
+    "sensor": {
+      "audio_quality": {
+        "name": "Audio quality",
+        "state": {
+          "hi_res": "Hi-Res",
+          "cd": "CD quality",
+          "lossless": "Lossless",
+          "lossy": "Lossy",
+          "dsd": "DSD"
+        }
+      },
+      "codec": {
+        "name": "Codec"
+      },
+      "sample_rate": {
+        "name": "Sample rate"
+      },
+      "bit_depth": {
+        "name": "Bit depth"
+      },
+      "bitrate": {
+        "name": "Bitrate"
+      },
+      "streaming_service": {
+        "name": "Streaming service"
+      }
+    }
+  },
+  "exceptions": {
+    "not_responding": {
+      "message": "The device at {host} is not responding. It is switched off at the mains or disconnected; turn it on at the device."
+    },
+    "turned_off": {
+      "message": "The device is turned off. Turn it on first."
+    },
+    "unknown_source": {
+      "message": "This device has no input or radio favourite called {source}."
+    },
+    "command_failed": {
+      "message": "The device rejected the command: {error}"
+    }
+  },
+  "issues": {
+    "address_changed": {
+      "title": "{name} has a new IP address",
+      "description": "The device moved from {old_host} to {new_host}. Home Assistant has switched to the new address.\n\nTo stop this from happening, reserve {new_host} for the device in your router (a DHCP reservation or static lease). Then ignore or dismiss this message."
+    }
+  }
+}

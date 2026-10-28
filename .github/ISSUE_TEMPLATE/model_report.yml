@@ -1,0 +1,27 @@
+name: Works with my model
+description: Tell us whether the integration works with your T+A device
+labels: [compatibility]
+body:
+  - type: input
+    id: model
+    attributes:
+      label: Model and firmware
+      placeholder: MP 3100 HV, 1.14.0
+    validations:
+      required: true
+  - type: checkboxes
+    id: works
+    attributes:
+      label: What works
+      options:
+        - label: Discovery
+        - label: Power on / standby
+        - label: Volume and mute
+        - label: Playback and now playing
+        - label: Instant updates (a change on the device shows within a second)
+        - label: Radio favourites
+        - label: Stream format sensors
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
