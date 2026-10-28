@@ -4,7 +4,7 @@
     "step": {
       "user": {
         "title": "T+A device",
-        "description": "Enter the IP address or host name of your T+A HV series streamer (for example a PSD 3100 HV, MP 3100 HV or PA 3100 HV). It must be on the same network as Home Assistant.\n\nBrought to you by [HiFiSync]({hifisync_url}): hi-fi system matching grounded in physics. Made by [Zero Story Points]({zsp_url}).",
+        "description": "Enter the IP address or host name of your T+A HV series streamer, for example a PSD 3100 HV. It must be on the same network as Home Assistant.\n\nBrought to you by [HiFiSync]({hifisync_url}): hi-fi system matching grounded in physics. Made by [Zero Story Points]({zsp_url}).",
         "data": {
           "host": "Host"
         },

@@ -1,6 +1,6 @@
 """Client for the web API of T+A HV streaming devices.
 
-T+A's HV series streamers run a StreamUnlimited streaming module (tested on a PSD 3100 HV,
+T+A's HV series streamers run a StreamUnlimited streaming module (read from a PSD 3100 HV,
 firmware 1.14.0), the platform Hegel's streaming amplifiers use too. Its web server exposes:
 
     GET  /api/getData?path=<path>&roles=value         read a node

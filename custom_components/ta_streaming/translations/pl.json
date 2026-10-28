@@ -4,7 +4,7 @@
     "step": {
       "user": {
         "title": "Urządzenie T+A",
-        "description": "Podaj adres IP lub nazwę hosta streamera T+A z serii HV (na przykład PSD 3100 HV, MP 3100 HV lub PA 3100 HV). Musi być w tej samej sieci co Home Assistant.\n\nPrzygotowane przez [HiFiSync]({hifisync_url}): dobór systemu hi-fi oparty na fizyce. Autor: [Zero Story Points]({zsp_url}).",
+        "description": "Podaj adres IP lub nazwę hosta streamera T+A z serii HV, na przykład PSD 3100 HV. Musi być w tej samej sieci co Home Assistant.\n\nPrzygotowane przez [HiFiSync]({hifisync_url}): dobór systemu hi-fi oparty na fizyce. Autor: [Zero Story Points]({zsp_url}).",
         "data": {
           "host": "Host"
         },

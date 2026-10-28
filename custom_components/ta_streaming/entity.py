@@ -24,5 +24,4 @@ class TAEntity(CoordinatorEntity[TACoordinator]):
             model=device.model,
             name=device.name,
             sw_version=device.firmware,
-            configuration_url=f"http://{coordinator.client.host}/webclient/",
         )
