@@ -4,7 +4,7 @@
     "step": {
       "user": {
         "title": "T+A device",
-        "description": "Enter the IP address or host name of your T+A HV series streamer, for example a PSD 3100 HV. It must be on the same network as Home Assistant.\n\nBrought to you by [HiFiSync]({hifisync_url}): hi-fi system matching grounded in physics. Made by [Zero Story Points]({zsp_url}).",
+        "description": "Enter the IP address or host name of your T+A HV series streamer, for example a PSD 3100 HV. It must be on the same network as Home Assistant.",
         "data": {
           "host": "Host"
         },
@@ -14,14 +14,14 @@
       },
       "zeroconf_confirm": {
         "title": "T+A device found",
-        "description": "Add {name} ({model}) at {host}?\n\nTip: reserve {host} for the device in your router (a DHCP reservation or static lease). If the address changes, Home Assistant finds the device again, but only while it is on the network.\n\nBrought to you by [HiFiSync]({hifisync_url}): hi-fi system matching grounded in physics. Made by [Zero Story Points]({zsp_url})."
+        "description": "Add {name} ({model}) at {host}?\n\nTip: reserve {host} for the device in your router (a DHCP reservation or static lease). If the address changes, Home Assistant finds the device again, but only while it is on the network."
       },
       "reconfigure": {
         "title": "Change the device address",
         "data": {
           "host": "Host"
         },
-        "description": "Enter the new address of the device.\n\nBrought to you by [HiFiSync]({hifisync_url}): hi-fi system matching grounded in physics. Made by [Zero Story Points]({zsp_url})."
+        "description": "Enter the new address of the device."
       }
     },
     "error": {
@@ -46,8 +46,7 @@
         },
         "data_description": {
           "max_volume": "Home Assistant never sets the volume above this, so a slipped slider cannot drive the system to full power. The device's own remote and knob are not limited."
-        },
-        "description": "Brought to you by [HiFiSync]({hifisync_url}): hi-fi system matching grounded in physics. Made by [Zero Story Points]({zsp_url})."
+        }
       }
     }
   },

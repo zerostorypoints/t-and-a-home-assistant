@@ -23,12 +23,8 @@ from .const import (
     CONF_MAX_VOLUME,
     DEFAULT_MAX_VOLUME,
     DOMAIN,
-    HIFISYNC_URL,
     MANUFACTURER,
-    ZSP_URL,
 )
-
-CREDITS = {"hifisync_url": HIFISYNC_URL, "zsp_url": ZSP_URL}
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -80,7 +76,6 @@ class TAConfigFlow(ConfigFlow, domain=DOMAIN):
                 vol.Schema({vol.Required(CONF_HOST): str}), user_input
             ),
             errors=errors,
-            description_placeholders=CREDITS,
         )
 
     async def async_step_zeroconf(self, discovery_info: ZeroconfServiceInfo) -> ConfigFlowResult:
@@ -138,7 +133,6 @@ class TAConfigFlow(ConfigFlow, domain=DOMAIN):
                 "name": self._device.name,
                 "model": self._device.model,
                 "host": self._host,
-                **CREDITS,
             },
         )
 
@@ -161,7 +155,6 @@ class TAConfigFlow(ConfigFlow, domain=DOMAIN):
                 vol.Schema({vol.Required(CONF_HOST): str}), user_input or entry.data
             ),
             errors=errors,
-            description_placeholders=CREDITS,
         )
 
 
@@ -185,5 +178,4 @@ class TAOptionsFlow(OptionsFlowWithReload):
         return self.async_show_form(
             step_id="init",
             data_schema=self.add_suggested_values_to_schema(schema, self.config_entry.options),
-            description_placeholders=CREDITS,
         )
